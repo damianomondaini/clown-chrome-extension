@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+
+    "name": "Clown",
+    "description": "This extension will display a clown",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts" : [
+        {
+            "matches": ["https://*.heig-vd.ch/*/", "https://heig-vd.ch/"],
+            "js": ["add-clown.js"]
+        }
+    ],
+
+    "permissions": [
+        "activeTab"
+    ]
+}
